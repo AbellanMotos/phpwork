@@ -5,4 +5,5 @@ return \FastRoute\simpleDispatcher(
         //Podemos añadir cualquier nueva ruta a la variable $route:
         //Método Http, URL, array (nombre controlador, nombre del metodo)
         $route->addRoute('GET','/',['Application\Controllers\HomeController', 'index']);
+        $route->addRoute('GET', '/contacto', ['Application\Controllers\ContactController', 'contact']);
     });
