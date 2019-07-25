@@ -27,5 +27,8 @@
         "fzaninotto/faker": "^1.8",
         "doctrine/annotations": "^1.6",
         "twig/twig": "^2.11"
+    },
+    "scripts": {
+        "start": "php -S localhost:5000 -t=public"
     }
 }

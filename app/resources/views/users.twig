@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}
+    Página de inicio con Twig
+{% endblock %}
+{% block content %}
+    <h1>Usuarios:</h1>
+
+    {% for user in users %}
+        * {{  user.name }}
+        * {{ user.email }}
+
+        <br />
+    {% else %}
+        No se encontraron usuarios.
+    {% endfor %}
+
+{% endblock %}

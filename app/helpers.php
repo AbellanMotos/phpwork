@@ -5,3 +5,7 @@ if (!function_exists('base_path')){
         return __DIR__ . '/..//' . ($path ? DIRECTORY_SEPARATOR . $path:$path);
     }
 }
+
+//if(!function_exists('redirect')){
+ //   function redirect (string $path){
+//        header(Loction)
