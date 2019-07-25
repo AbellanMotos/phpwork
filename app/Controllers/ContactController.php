@@ -1,7 +1,13 @@
 <?php
 namespace Application\Controllers;
-class ContactController
-{
+use Application\Providers\Doctrine;
+
+class ContactController {
+    protected $doctrine;
+
+    public function __construct(Doctrine $doctrine){
+        $this->doctrine = $doctrine;
+    }
     public function contact()
     {
         echo('
@@ -25,5 +31,6 @@ class ContactController
             </nav>
             ');
         echo('<h1>Contacto</h1>');
+        \Kint::dump($this->doctrine);
 
 }}

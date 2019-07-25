@@ -9,13 +9,16 @@ return [
         return parse_ini_file(__DIR__ . '/../../app/Config/database.ini');
     },
 
-    HomeController::class => function(){
+   /* HomeController::class => function(){
         return new HomeController;
     },
 
     ContactController::class => function(){
         return new ContactController;
-    },
+    }, */
+
+    HomeController::class => \DI\create() -> constructor(\DI\get(Doctrine::class)),
+    ContactController::class => \DI\create() -> constructor(\DI\get(Doctrine::class)),
     Doctrine::class=>function(\Psr\Container\ContainerInterface $container){
         return new Doctrine($container);
     }
