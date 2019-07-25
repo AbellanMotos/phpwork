@@ -11,7 +11,7 @@ class HomeController {
     }
 
     public function index (Doctrine $doctrine) {
-        $user = $this -> doctrine -> em -> getRepository(User::class) -> find(2);
+        $user = $this -> doctrine -> em -> getRepository(User::class) -> find(4);
         \kint::dump($user);
         echo ('
         <link rel=stylesheet" href="/./public/components/bootstrap/dist/css/bootstrap.css">

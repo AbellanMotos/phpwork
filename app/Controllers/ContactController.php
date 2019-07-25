@@ -1,17 +1,23 @@
 <?php
 namespace Application\Controllers;
 use Application\Providers\Doctrine;
+use Application\Models\Entities\User;
 
 class ContactController {
     protected $doctrine;
 
     public function __construct(Doctrine $doctrine){
         $this->doctrine = $doctrine;
+
+
     }
     public function contact()
     {
+        $user = $this -> doctrine -> em -> getRepository(User::class) -> find(4);
+        \kint::dump($user);
+
         echo('
-            <link rel="stylesheet" href="../public/bower_components/bootstrap/dist/css/bootstrap.css">
+            <link rel="stylesheet" href="/./public/components/bootstrap/dist/css/bootstrap.css">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="/">PHPwork</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
@@ -32,5 +38,11 @@ class ContactController {
             ');
         echo('<h1>Contacto</h1>');
         \Kint::dump($this->doctrine);
+
+        echo('<h3>'.$user->name.'</h3>');
+        echo('<h5>'.$user->email.'</h5>');
+        $fecha = $user -> created_at;
+        $fechaString = $fecha -> format('Y-n-d H:i:s');
+        echo('<p>Fecha creación:' .$fechaString.'</p>');
 
 }}
