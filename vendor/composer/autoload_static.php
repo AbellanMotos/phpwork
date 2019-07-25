@@ -20,6 +20,10 @@ class ComposerStaticInit7b758f2368bc265301660ee23c5fd085
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Util\\' => 22,
@@ -94,6 +98,10 @@ class ComposerStaticInit7b758f2368bc265301660ee23c5fd085
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Symfony\\Polyfill\\Util\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-util',
@@ -276,6 +284,13 @@ class ComposerStaticInit7b758f2368bc265301660ee23c5fd085
     );
 
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'J' => 
         array (
             'JasonGrimes' => 

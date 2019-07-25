@@ -25,6 +25,7 @@
     },
     "require": {
         "fzaninotto/faker": "^1.8",
-        "doctrine/annotations": "^1.6"
+        "doctrine/annotations": "^1.6",
+        "twig/twig": "^2.11"
     }
 }
